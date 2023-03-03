@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyScript : MonoBehaviour
 {
-    float health = 100f;
+    [SerializeField] float health = 100f;
     Animator anim;
     // Start is called before the first frame update
     void Start()
