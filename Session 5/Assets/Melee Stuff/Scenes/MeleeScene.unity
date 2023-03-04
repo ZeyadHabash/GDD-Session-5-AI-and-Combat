@@ -183,8 +183,8 @@ PolygonCollider2D:
     - - {x: -0.18457344, y: 1.3302429}
       - {x: 0, y: 1}
       - {x: 0.14758652, y: 0.43540016}
-      - {x: 0.38006794, y: -0.101270854}
-      - {x: 1.2155814, y: 0.12621897}
+      - {x: 0.5007433, y: -0.36780518}
+      - {x: 1.3534966, y: -0.22360721}
       - {x: 1.1080061, y: 0.8145501}
 --- !u!1 &595875480
 GameObject:
@@ -198,8 +198,8 @@ GameObject:
   - component: {fileID: 595875483}
   - component: {fileID: 595875482}
   - component: {fileID: 595875485}
-  - component: {fileID: 595875486}
   - component: {fileID: 595875487}
+  - component: {fileID: 595875486}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -329,6 +329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  damage: 0
 --- !u!60 &595875487
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -346,7 +347,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2}
+    oldSize: {x: 1.75, y: 2.0625}
     newSize: {x: 1.75, y: 2.0625}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1363,7 +1364,7 @@ GameObject:
   - component: {fileID: 960641959}
   - component: {fileID: 960641960}
   - component: {fileID: 960641961}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -1525,6 +1526,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce22f59628f14c345b20366232c532bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
 --- !u!1 &1012579917
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class MeleePlayerScript : MonoBehaviour
 {
-    public float speed;
+    [SerializeField] float speed;
     bool isAttacking;
     float moveInput;
-    public float damage;
+    [SerializeField] float damage;
     Animator anim;
     Rigidbody2D rb;
     Collider2D hitbox;
     ContactFilter2D enemyFilter;
-    // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -22,6 +21,7 @@ public class MeleePlayerScript : MonoBehaviour
         damage = 30f;
         enemyFilter = new ContactFilter2D();
         enemyFilter.SetLayerMask(LayerMask.GetMask("Enemies"));
+        enemyFilter.useLayerMask = true;
     }
 
     // Update is called once per frame
@@ -60,10 +60,6 @@ public class MeleePlayerScript : MonoBehaviour
             }
         }
         hitbox.enabled = false;
-        // for (int i = 0; i < enemiesToDamage.Length; i++)
-        // {
-        //     enemiesToDamage[i].GetComponent<EnemyScript>().TakeDamage(damage);
-        // }
     }
 
 

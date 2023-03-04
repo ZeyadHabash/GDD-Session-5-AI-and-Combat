@@ -30,6 +30,7 @@ public class EnemyScript : MonoBehaviour
     
     public void Die()
     {
+        GetComponent<Collider2D>().enabled = false;
         anim.SetBool("Dead", true);
     }
 
