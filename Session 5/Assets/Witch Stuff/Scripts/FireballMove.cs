@@ -38,7 +38,7 @@ public class FireballMove : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D obj)
     {
-        if (obj.gameObject.tag != "Player" && obj.gameObject.tag != "fireball")
+        if (obj.gameObject.tag != "Player" && obj.gameObject.tag != "fireball" && obj.gameObject.tag != "Aloe" && obj.gameObject.tag != "Poppy")
             Destroy(this.gameObject);
     }
 }
